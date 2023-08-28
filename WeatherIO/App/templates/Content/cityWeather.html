@@ -1,0 +1,86 @@
+{% if weather_data %}
+<section class="vh-100" style="background-color: #938274;">
+    <div class="container py-5 h-100">
+  
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-8 col-lg-6 col-xl-4">
+  
+          <div class="card" style="color: #4B515D; border-radius: 35px;">
+            <div class="card-body p-4">
+  
+              <div class="d-flex">
+                <h3 class="flex-grow-1">{{ weather_data.city }}</h3>
+                <h5>{{ weather_data.Day }}</h5>
+              </div>
+  
+              <div class="d-flex flex-column text-center mt-5 mb-4">
+                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> {{ weather_data.temperature }}°C </h6>
+                <span class="small" style="color: #868B94">{{ weather_data.description }}</span>
+              </div>
+  
+              <div class="d-flex align-items-center justify-content-center">
+                <div>
+                  <img src="http://openweathermap.org/img/w/{{weather_data.icon}}.png" width="100px" alt="{{ weather_data.description }}">
+                </div>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>
+{% endif %}
+
+{% if daily_forecast %}
+<div class="d-flex align-items-center justify-content-center">
+    <div>
+        <h2>Forecast</h2>
+    </div>
+</div>
+    
+<div class="forecast-container">
+    {% for forecast in daily_forecast%}
+        <div class="forecast">
+            <section class="vh-100" style="background-color: #938274;">
+                <div class="container py-5 h-100">
+              
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-8 col-lg-6 col-xl-4">
+              
+                      <div class="card" style="color: #4B515D; border-radius: 35px;">
+                        <div class="card-body p-4">
+              
+                          <div class="d-flex">
+                            <h3 class="flex-grow-1">{{ forecast.day }}</h3>
+                            <h5>{{ forecast.time }}</h5>
+                          </div>
+              
+                          <div class="d-flex flex-column text-center mt-5 mb-4">
+                            <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;">min temp {{ forecast.min_temp }}°C</h6>
+                            <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;">max temp {{ forecast.max_temp }}°C</h6>
+                            <span class="small" style="color: #868B94">{{ forecast.description }}</span>
+                          </div>
+              
+                          <div class="d-flex align-items-center justify-content-center">
+                            <div>
+                                <img src="http://openweathermap.org/img/w/{{forecast.icon}}.png"  width="100px" alt="{{ forecast.description }}">
+                            </div>
+                          </div>
+              
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+              
+                </div>
+              </section>
+        </div>
+    {% endfor %}
+</div>
+
+{% endif %}
+
