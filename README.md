@@ -1,5 +1,5 @@
 # WeatherIO  
-This is a Django weather web application project that helps one get the current weather and forecast weather of any specific city.  
+This is a Django weather web application that helps one get the current weather and forecast weather of any city.  
 
 ## Tools used: 
 - Bootstrap 5
@@ -12,8 +12,5 @@ WeatherIO is a full-stack web application that was made with the idea of helping
 ## Features
 WeatherIO makes use of the OpenWeatherMap API to allow users to get the current weather/forecast weather of any city.  
 
-## Usage
+## Design
 ![Screenshot](images/Weather-IO.jpg) 
-
-## Acknowledgments 
-The frontend was made using the Free Bootstrap Basic weather widget Template from [MDB](https://mdbootstrap.com/docs/standard/extended/weather/)
