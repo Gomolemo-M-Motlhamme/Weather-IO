@@ -13,8 +13,7 @@ WeatherIO is a full-stack web application that was made with the idea of helping
 WeatherIO makes use of the OpenWeatherMap API to allow users to get the current weather/forecast weather of any city.  
 
 ## Usage
-![Screenshot](images/1.png)  
-![Screenshot](images/2.png) 
+![Screenshot](images/Weather-IO.jpg) 
 
 ## Acknowledgments 
 The frontend was made using the Free Bootstrap Basic weather widget Template from [MDB](https://mdbootstrap.com/docs/standard/extended/weather/)
